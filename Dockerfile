@@ -7,6 +7,6 @@ RUN wget -O /usr/local/bin/gitlab-ci-multi-runner https://gitlab-ci-multi-runner
 RUN chmod +x /usr/local/bin/gitlab-ci-multi-runner
 RUN useradd --comment 'GitLab Runner' --create-home gitlab-runner --shell /bin/bash
 RUN apt-get -y install gtk2-engines-pixbuf libgl1-mesa-dri
-RUN apt-get -y install lazarus libusb-dev libsane-dev sqlite3
+RUN apt-get -y install lazarus libusb-dev libsane-dev sqlite3 postgresql-client
 RUN apt-get clean && apt-get autoremove -y
 VOLUME ["/etc/gitlab-runner", "/home/gitlab-runner"]
