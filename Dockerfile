@@ -1,4 +1,4 @@
-FROM ioft/i386-ubuntu
+FROM 32bit/debian
 MAINTAINER Christian Ulrich
 RUN apt-get update -y && \
     apt-get upgrade -y && \
