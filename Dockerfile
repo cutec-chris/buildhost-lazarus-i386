@@ -2,7 +2,7 @@ FROM 32bit/debian
 MAINTAINER Christian Ulrich
 RUN apt-get update -y && \
     apt-get upgrade -y && \
-    apt-get install -y wget git zip
+    apt-get install -y wget git zip sshpass sudo
 RUN wget -O /usr/local/bin/gitlab-ci-multi-runner https://gitlab-ci-multi-runner-downloads.s3.amazonaws.com/latest/binaries/gitlab-ci-multi-runner-linux-amd64    
 RUN chmod +x /usr/local/bin/gitlab-ci-multi-runner
 RUN useradd --comment 'GitLab Runner' --create-home gitlab-runner --shell /bin/bash
