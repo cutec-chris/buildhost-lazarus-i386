@@ -14,6 +14,6 @@ RUN gpg --keyserver hkp://pgp.mit.edu:11371 --recv-keys 6A11800F && \
     sudo mv -v lazarus.list  /etc/apt/sources.list.d/lazarus.list
 ENV DEBIAN_FRONTEND=noninteractive
 RUN sudo apt-get update
-RUN echo y | sudo apt-get install -y -t lazarus-stable lazarus
-RUN apt-get clean && apt-get autoremove -y
+#RUN echo y | sudo apt-get install -y -t lazarus-stable lazarus
+#RUN apt-get clean && apt-get autoremove -y
 VOLUME ["/etc/gitlab-runner", "/home/gitlab-runner"]
