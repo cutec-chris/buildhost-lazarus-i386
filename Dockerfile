@@ -5,7 +5,7 @@ RUN apt-get -y update && \
 
 RUN echo "Downloading and installing Debians" && \
     cd /tmp && \
-    wget "https://downloads.sourceforge.net/project/lazarus/Lazarus%20Linux%20i386%20DEB/Lazarus%201.4.4/lazarus_1.4.4-0_i386.deb?r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Flazarus%2Ffiles%2FLazarus%2520Linux%2520i386%2520DEB%2FLazarus%25201.4.4%2F&ts=1491692010&use_mirror=netix" -O lazarus.deb
+    wget --no-check-certificate "https://downloads.sourceforge.net/project/lazarus/Lazarus%20Linux%20i386%20DEB/Lazarus%201.4.4/lazarus_1.4.4-0_i386.deb?r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Flazarus%2Ffiles%2FLazarus%2520Linux%2520i386%2520DEB%2FLazarus%25201.4.4%2F&ts=1491692010&use_mirror=netix" -O lazarus.deb
 RUN ls /tmp/* && \
     dpkg -i /tmp/lazarus.deb
 
