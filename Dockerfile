@@ -9,9 +9,4 @@ RUN echo "Downloading and installing Debians" && \
 RUN ls /tmp/* && \
     dpkg -i /tmp/lazarus.deb
 
-RUN wget -O /usr/local/bin/gitlab-ci-multi-runner https://gitlab-ci-multi-runner-downloads.s3.amazonaws.com/latest/binaries/gitlab-ci-multi-runner-linux-amd64 &&\
-    chmod +x /usr/local/bin/gitlab-ci-multi-runner &&\
-    useradd --comment 'GitLab Runner' --create-home gitlab-runner --shell /bin/bash
-
 RUN apt-get clean && apt-get autoremove -y
-VOLUME ["/etc/gitlab-runner", "/home/gitlab-runner"]
