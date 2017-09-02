@@ -10,3 +10,5 @@ RUN ls /tmp/* && \
     dpkg -i --force-depends /tmp/lazarus.deb
 
 RUN apt-get clean && apt-get autoremove -y
+
+RUN lazbuild --build-ide="Normal IDE"; exit 0
