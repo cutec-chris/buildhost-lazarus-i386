@@ -1,1 +1,0 @@
-<a href="http://192.168.177.120:10091/continous-integration/buildhost-lazarus-i386"><img src="http://192.168.177.120:10091/api/badges/continous-integration/buildhost-lazarus-i386/status.svg"/></a>
