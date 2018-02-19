@@ -7,7 +7,7 @@ RUN apt-get clean && apt-get autoremove -y
 
 RUN echo "Downloading and installing Debians" && \
     cd /tmp && \
-    wget "https://downloads.sourceforge.net/project/lazarus/Lazarus%20Linux%20i386%20DEB/Lazarus%201.6/lazarus_1.6-0_i386.deb?r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Flazarus%2Ffiles%2FLazarus%2520Linux%2520i386%2520DEB%2FLazarus%25201.6%2F&ts=1504310976&use_mirror=10gbps-io" -O lazarus.deb
+    wget "https://netix.dl.sourceforge.net/project/lazarus/Lazarus%20Linux%20i386%20DEB/Lazarus%201.8.0/lazarus-project_1.8.0-0_i386.deb" -O lazarus.deb
 RUN ls /tmp/* && \
     dpkg -i --force-depends /tmp/lazarus.deb
 
